@@ -15,9 +15,9 @@ interface Project {
 const allProjects: Project[] = [
     // Commercial / Real World
     {
-        title: "Stay SalMar",
+        title: "Stay Salmar",
         category: "Website Comercial",
-        description: "Site institucional desenvolvido para a Stay SalMar, focado em experiência do usuário e conversão.",
+        description: "Site institucional desenvolvido para a Stay Salmar, focado em experiência do usuário e conversão.",
         link: "https://www.staysalmar.com/",
         type: "commercial",
         year: "2025"
@@ -25,7 +25,7 @@ const allProjects: Project[] = [
     {
         title: "Nutri Patrícia Monteiro",
         category: "Website Profissional",
-        description: "Portfólio e site de agendamento para nutricionista, com design limpo e responsivo.",
+        description: "Landing page para nutricionista, com design limpo e responsivo.",
         link: "https://nutripatriciamonteiro.vercel.app",
         type: "commercial",
         year: "2026"
@@ -35,7 +35,7 @@ const allProjects: Project[] = [
     {
         title: "SIG Finance",
         category: "Sistema de Gestão",
-        description: "Sistema completo de gestão financeira desenvolvido em grupo.",
+        description: "Sistema de gestão financeira desenvolvido em grupo como projeto de faculdade.",
         link: "https://github.com/oguiaraujo/SIG-Finance",
         type: "academic",
         year: "2024"
@@ -43,7 +43,7 @@ const allProjects: Project[] = [
     {
         title: "SIG Beer",
         category: "Sistema de Gestão",
-        description: "Sistema para gestão de cervejaria/distribuidora.",
+        description: "Sistema para gestão de cervejaria/distribuidora desenvolvido em grupo como projeto de faculdade.",
         link: "https://github.com/SamuelMorais45/SIG-Beer",
         type: "academic",
         year: "2024"
@@ -61,7 +61,7 @@ const allProjects: Project[] = [
     {
         title: "Rick and Morty API",
         category: "Integração API",
-        description: "Aplicação front-end consumindo a API do Rick and Morty para listar personagens e detalhes.",
+        description: "Aplicação front-end consumindo a API do Rick and Morty para listar personagens e detalhes como projeto de faculdade.",
         link: "https://github.com/coderlupus/personal-rick-and-morty-api",
         type: "personal",
         year: "2025"
