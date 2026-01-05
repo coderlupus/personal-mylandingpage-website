@@ -15,12 +15,12 @@ const SpecsSection = () => {
           </div>
           <div className="flex-1 h-[1px] bg-gray-300"></div>
         </div>
-        
+
         {/* Main content with text mask image - responsive text sizing */}
         <div className="max-w-5xl pl-4 sm:pl-8">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display leading-tight mb-8 sm:mb-12">
             <span className="block bg-clip-text text-transparent bg-[url('/text-mask-image.jpg')] bg-cover bg-center">
-              Desenvolvedor em formação com paixão por tecnologia e gestão. Experiência em múltiplas linguagens e metodologias ágeis, sempre buscando soluções inovadoras para problemas reais.
+              Desenvolvedor em formação com paixão por tecnologia e gestão. Já tive contato com múltiplas linguagens e metodologias ágeis, sempre buscando soluções inovadoras para problemas reais.
             </span>
           </h2>
         </div>

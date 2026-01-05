@@ -30,6 +30,14 @@ const allProjects: Project[] = [
         type: "commercial",
         year: "2026"
     },
+    {
+        title: "Sistema de agendamento - Clínica de Estética",
+        category: "Sistema Fullstack",
+        description: "Sistema de agendamento online para clínica de estética de sobrancelhas, simplificando a gestão de horários. Frontend React e Backend integrados.",
+        link: "https://github.com/fundaoimd/projeto_es_frontend",
+        type: "commercial",
+        year: "2025"
+    },
 
     // Extension Projects
     {

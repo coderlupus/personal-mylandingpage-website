@@ -1,6 +1,6 @@
-
 import React, { useEffect, useRef } from "react";
 import { cn } from "@/lib/utils";
+import { Code2, Database, Layout, Users, Brain, Rocket, Shield } from "lucide-react";
 
 interface FeatureCardProps {
   icon: React.ReactNode;
@@ -11,7 +11,7 @@ interface FeatureCardProps {
 
 const FeatureCard = ({ icon, title, description, index }: FeatureCardProps) => {
   const cardRef = useRef<HTMLDivElement>(null);
-  
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -24,25 +24,25 @@ const FeatureCard = ({ icon, title, description, index }: FeatureCardProps) => {
       },
       { threshold: 0.1 }
     );
-    
+
     if (cardRef.current) {
       observer.observe(cardRef.current);
     }
-    
+
     return () => {
       if (cardRef.current) {
         observer.unobserve(cardRef.current);
       }
     };
   }, []);
-  
+
   return (
-    <div 
+    <div
       ref={cardRef}
       className={cn(
         "feature-card glass-card opacity-0 p-4 sm:p-6",
         "lg:hover:bg-gradient-to-br lg:hover:from-white lg:hover:to-pulse-50",
-        "transition-all duration-300"
+        "transition-all duration-300 transform hover:-translate-y-1"
       )}
       style={{ animationDelay: `${0.1 * index}s` }}
     >
@@ -50,14 +50,14 @@ const FeatureCard = ({ icon, title, description, index }: FeatureCardProps) => {
         {icon}
       </div>
       <h3 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-3">{title}</h3>
-      <p className="text-gray-600 text-sm sm:text-base">{description}</p>
+      <p className="text-gray-600 text-sm sm:text-base leading-relaxed">{description}</p>
     </div>
   );
 };
 
 const Features = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
-  
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -75,18 +75,59 @@ const Features = () => {
       },
       { threshold: 0.1 }
     );
-    
+
     if (sectionRef.current) {
       observer.observe(sectionRef.current);
     }
-    
+
     return () => {
       if (sectionRef.current) {
         observer.unobserve(sectionRef.current);
       }
     };
   }, []);
-  
+
+  const hardSkills = [
+    {
+      icon: <Code2 className="w-5 h-5 sm:w-6 sm:h-6" />,
+      title: "Linguagens & Ecossistema",
+      description: "Vivência acadêmica e prática com Python, C, Java, JavaScript/TypeScript e Dart. Uso cotidiano de VS Code e Git."
+    },
+    {
+      icon: <Layout className="w-5 h-5 sm:w-6 sm:h-6" />,
+      title: "Front-end & Mobile",
+      description: "Construção de interfaces com React, Vue e Flutter. Prototipagem básica utilizando Figma, Canva e Affinity."
+    },
+    {
+      icon: <Database className="w-5 h-5 sm:w-6 sm:h-6" />,
+      title: "Back-end & Dados",
+      description: "Experiência com Spring, MySQL, PostgreSQL e Firebase. Contato com Docker."
+    },
+    {
+      icon: <Shield className="w-5 h-5 sm:w-6 sm:h-6" />,
+      title: "Temas de Interesse",
+      description: "Estudos introdutórios em Cibersegurança, Inteligência Artificial e Automação. Participação em eventos como GO!RN."
+    }
+  ];
+
+  const softSkills = [
+    {
+      icon: <Users className="w-5 h-5 sm:w-6 sm:h-6" />,
+      title: "Liderança & Gestão",
+      description: "Gestão de projetos e liderança na ordem DeMolay. Organização, planejamento e visão estratégica."
+    },
+    {
+      icon: <Brain className="w-5 h-5 sm:w-6 sm:h-6" />,
+      title: "Inteligência Estratégica",
+      description: "Adaptabilidade, resiliência e pensamento crítico. Capacidade de tomar decisões sob pressão e aprendizado autônomo."
+    },
+    {
+      icon: <Rocket className="w-5 h-5 sm:w-6 sm:h-6" />,
+      title: "Colaboração & Comunicação",
+      description: "Empatia, escuta ativa e negociação. Trabalho em equipe com foco em resolução de conflitos e inovação."
+    }
+  ];
+
   return (
     <section className="py-12 sm:py-16 md:py-20 pb-0 relative bg-gray-50" id="skills" ref={sectionRef}>
       <div className="section-container">
@@ -95,51 +136,51 @@ const Features = () => {
             <span>Competências</span>
           </div>
           <h2 className="section-title mb-3 sm:mb-4 opacity-0 fade-in-element">
-            Habilidades Técnicas <br className="hidden sm:block" />e Conhecimentos
+            Vivências &<br className="hidden sm:block" /> Aprendizados
           </h2>
           <p className="section-subtitle mx-auto opacity-0 fade-in-element">
-            Competências desenvolvidas através de formação acadêmica, projetos práticos e experiência profissional.
+            Um resumo das tecnologias com as quais já tive contato e tenho interesse, além das habilidades comportamentais que guiam minha jornada.
           </p>
         </div>
-        
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
-      <FeatureCard
-        icon={<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5 sm:w-6 sm:h-6"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>}
-        title="Linguagens de Programação"
-        description="Python, C, Flutter/Dart, HTML/CSS. Experiência em desenvolvimento web e mobile."
-        index={0}
-      />
-      <FeatureCard
-        icon={<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5 sm:w-6 sm:h-6"><path d="M12 2a10 10 0 1 0 10 10 4 4 0 1 1-4-4"></path><circle cx="12" cy="12" r="3"></circle></svg>}
-        title="Metodologias Ágeis"
-        description="Scrum, XP, Crystal, SAFe. Experiência em gestão de projetos e processos."
-        index={1}
-      />
-      <FeatureCard
-        icon={<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5 sm:w-6 sm:h-6"><rect width="18" height="10" x="3" y="11" rx="2"></rect><circle cx="12" cy="5" r="2"></circle><path d="m12 7 0 4"></path></svg>}
-        title="Banco de Dados"
-        description="Modelagem de dados e SQL. Experiência em estruturação e consulta de informações."
-        index={2}
-      />
-      <FeatureCard
-        icon={<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5 sm:w-6 sm:h-6"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>}
-        title="Engenharia de Software"
-        description="Ciclo de vida, levantamento de requisitos, documentação e boas práticas."
-        index={3}
-      />
-      <FeatureCard
-        icon={<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5 sm:w-6 sm:h-6"><path d="M16 6H3v11a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1h-2"></path><path d="M8 6V4a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2"></path></svg>}
-        title="Gestão & Empreendedorismo"
-        description="Experiência como CEO em projetos próprios. Gestão de pessoas, processos e negócios."
-        index={4}
-      />
-      <FeatureCard
-        icon={<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5 sm:w-6 sm:h-6"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>}
-        title="Comunicação"
-        description="Inglês técnico certificado (EF SET) e LIBRAS. Comunicação eficaz e inclusiva."
-        index={5}
-      />
+
+        {/* Hard Skills Section */}
+        <div className="mb-12">
+          <h3 className="text-xl sm:text-2xl font-bold text-gray-800 mb-6 flex items-center gap-2 opacity-0 fade-in-element">
+            <span className="w-2 h-8 bg-pulse-500 rounded-full inline-block"></span>
+            Tech & Ferramentas
+          </h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
+            {hardSkills.map((skill, index) => (
+              <FeatureCard
+                key={index}
+                icon={skill.icon}
+                title={skill.title}
+                description={skill.description}
+                index={index}
+              />
+            ))}
+          </div>
         </div>
+
+        {/* Soft Skills Section */}
+        <div>
+          <h3 className="text-xl sm:text-2xl font-bold text-gray-800 mb-6 flex items-center gap-2 opacity-0 fade-in-element delay-300">
+            <span className="w-2 h-8 bg-green-500 rounded-full inline-block"></span>
+            Soft Skills & Liderança
+          </h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
+            {softSkills.map((skill, index) => (
+              <FeatureCard
+                key={index}
+                icon={skill.icon}
+                title={skill.title}
+                description={skill.description}
+                index={index + 4} // Offset
+              />
+            ))}
+          </div>
+        </div>
+
       </div>
     </section>
   );

@@ -15,22 +15,22 @@ const experiences: ExperienceProps[] = [{
   period: "Mar/2023 – Out/2023",
   backgroundImage: "/background-section1.png"
 }, {
-  content: "Planejo e executo projetos personalizados, crio listas de prospecção, realizo contatos ativos, conduzo reuniões e proponho soluções. Analiso o cenário do cliente e desenvolvo estratégias.",
+  content: "Planejava e executava projetos personalizados, criava listas de prospecção, realizava contatos ativos, conduzia reuniões e entregava soluções. Analisava o cenário do cliente e desenvolvia estratégias.",
   author: "F1 RISING",
   role: "Fundador e CEO",
   period: "Dez/2024 – Presente",
   backgroundImage: "/background-section2.png"
 }, {
-  content: "Auxiliar no laboratório de informática de uma escola, oferecendo suporte técnico, manutenção de equipamentos e apoio aos alunos com tecnologia educacional.",
+  content: "Auxilio no laboratório de informática de uma escola, oferecendo suporte técnico, manutenção de equipamentos e apoio aos alunos com tecnologia educacional.",
   author: "Laboratório de Informática",
   role: "Auxiliar Técnico",
-  period: "Atual",
+  period: "Ago/2025 - Presente ",
   backgroundImage: "/background-section3.png"
 }, {
-  content: "Participação ativa há vários anos, contribuindo para o desenvolvimento de jovens líderes e participando de iniciativas comunitárias e do Rotary.",
-  author: "Ordem DeMolay & Rotary",
+  content: "Participação ativa há vários anos, contribuindo para o desenvolvimento de jovens líderes e participando de iniciativas comunitárias ajudando a sociedade.",
+  author: "Ordem DeMolay",
   role: "Membro Voluntário",
-  period: "Vários anos",
+  period: "2019 - Presente",
   backgroundImage: "/background-section1.png"
 }];
 

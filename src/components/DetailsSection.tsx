@@ -71,6 +71,7 @@ const DetailsSection = () => {
         { name: "Leitura e Produção de Texto", status: "completed" },
         { name: "Org., Sistemas e Métodos", status: "completed" },
         { name: "Inglês Técnico", status: "completed" },
+        { name: "Libras", status: "completed" },
         { name: "Empreendedorismo em TI", status: "future" },
         { name: "Contabilidade e Custos", status: "future" },
         { name: "Ética / Direito / Filosofia", status: "future" },

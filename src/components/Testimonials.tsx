@@ -13,33 +13,33 @@ interface TestimonialProps {
 }
 
 const projects: TestimonialProps[] = [{
+  content: "Sistema de agendamento online para clínica de estética, simplificando a gestão de horários. Frontend React e Backend integrados.",
+  author: "Agendamento Estética",
+  role: "Sistema Fullstack",
+  gradient: "from-pink-600 via-rose-500 to-orange-400",
+  backgroundImage: "/background-section1.png",
+  href: "https://github.com/fundaoimd/projeto_es_frontend"
+}, {
   content: "Site institucional profissional desenvolvido com foco em performance e conversão, com design minimalista e responsivo.",
   author: "Stay Salmar",
   role: "Website Comercial",
   gradient: "from-blue-700 via-indigo-800 to-purple-900",
-  backgroundImage: "/background-section1.png",
+  backgroundImage: "/background-section2.png",
   href: "https://www.staysalmar.com/"
+}, {
+  content: "Participação na escrita de livro e desenvolvimento de plataforma digital para obras relacionadas ao Nordeste e Sertão.",
+  author: "Plataforma Nordeste",
+  role: "Extensão & Cultura",
+  gradient: "from-orange-700 via-amber-600 to-yellow-500",
+  backgroundImage: "/background-section3.png",
+  href: "/documents/livro-nordeste.pdf"
 }, {
   content: "Portfólio interativo para profissional da saúde, integrando blog e sistema de agendamento em uma interface acolhedora.",
   author: "Nutri Patrícia Monteiro",
-  role: "Landing page",
-  gradient: "from-indigo-900 via-purple-800 to-orange-500",
-  backgroundImage: "/background-section2.png",
-  href: "https://nutripatriciamonteiro.vercel.app"
-}, {
-  content: "Sistema completo de gestão financeira com dashboards, relatórios e controle de fluxo de caixa, desenvolvido com React e Node.js.",
-  author: "SIG Finance",
-  role: "Sistema Web",
-  gradient: "from-purple-800 via-pink-700 to-red-500",
-  backgroundImage: "/background-section3.png",
-  href: "https://github.com/oguiaraujo/SIG-Finance"
-}, {
-  content: "Integração front-end com a API do Rick and Morty, explorando paginação, filtros e animações em uma interface divertida.",
-  author: "Rick and Morty API",
-  role: "Integração API",
-  gradient: "from-orange-600 via-red-500 to-purple-600",
+  role: "Landing Page",
+  gradient: "from-green-600 via-emerald-500 to-teal-400",
   backgroundImage: "/background-section1.png",
-  href: "https://github.com/coderlupus/personal-rick-and-morty-api"
+  href: "https://nutripatriciamonteiro.vercel.app"
 }];
 
 const ProjectCard = ({
