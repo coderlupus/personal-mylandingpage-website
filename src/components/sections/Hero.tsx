@@ -2,7 +2,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 import { ArrowRight } from "lucide-react";
-import LottieAnimation from "./LottieAnimation";
+import LottieAnimation from "@/components/ui/LottieAnimation";
 
 const Hero = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -65,7 +65,7 @@ const Hero = () => {
             style={{ animationDelay: "0.5s" }}
             className="section-subtitle mt-3 sm:mt-6 mb-4 sm:mb-8 leading-relaxed opacity-0 animate-fade-in text-gray-950 font-normal text-base sm:text-lg text-center mx-auto max-w-2xl"
           >
-            Sou desenvolvedor e empreendedor. tenho o foco em entender o desafio do cliente para entregar soluções digitais personalizadas!
+            Sou desenvolvedor e empreendedor. Tenho o foco em entender o desafio do cliente para entregar soluções digitais personalizadas!
           </p>
 
           <div
