@@ -14,19 +14,19 @@ const HumanIntuitionSection = () => {
             </div>
             <h2 className="section-title mb-6">Desenvolvedor focado em criar soluções digitais sob medida</h2>
             <p className="text-lg text-gray-700 mb-6">
-              Sou Nathan Lopes, desenvolvedor e empreendedor. Meu trabalho começa entendendo o problema do cliente e termina com uma solução digital funcional, escalável e alinhada ao negócio.
+              Sou Nathan Lopes, desenvolvedor e empreendedor. Meu trabalho começa entendendo a necessidade do cliente e <strong>buscando a melhor solução digital para cada contexto.</strong> Priorizo clareza, organização e soluções funcionais que façam sentido no dia a dia de quem usa.
             </p>
             <p className="text-lg text-gray-700 mb-6">
-              Além disso, busco trazer uma visão de negócio e processo, o que me permite criar soluções que fazem sentido não só tecnicamente, mas também estrategicamente.
+              Além disso, tenho interesse em processos e visão de negócio, o que influencia diretamente a forma como planejo e desenvolvo cada projeto.
             </p>
             <div className="mb-6">
               <p className="font-semibold text-gray-900 mb-3">O que você pode esperar do meu trabalho:</p>
               <ul className="space-y-4">
                 {[
                   "Desenvolvimento de soluções digitais sob medida",
-                  "Visão estratégica além do código",
+                  "Abordagem cuidadosa e estratégica desde o início do projeto",
                   "Comunicação clara e acompanhamento próximo",
-                  "Foco em resolver problemas reais, não em vender pacotes prontos"
+                  "Foco em resolver problemas reais, sem soluções engessadas"
                 ].map((item, index) => (
                   <li key={index} className="flex items-start">
                     <div className="mr-3 text-pulse-500">
