@@ -38,6 +38,15 @@ const HumanIntuitionSection = () => {
               ))}
             </ul>
           </div>
+
+          <div className="relative mx-auto mt-10 lg:mt-0 max-w-sm lg:max-w-md">
+            <div className="absolute top-4 left-4 w-full h-full bg-pulse-200 rounded-2xl -z-10"></div>
+            <img
+              src="/nathan-profile.jpg"
+              alt="Nathan Lopes"
+              className="w-full h-auto rounded-2xl shadow-lg border-4 border-white object-cover aspect-[3/4]"
+            />
+          </div>
         </div>
       </div>
     </section>

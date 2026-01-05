@@ -79,7 +79,7 @@ const DetailsSection = () => {
     }
   ];
 
-  return <section className="w-full bg-white py-0">
+  return <section id="education" className="w-full bg-white py-0">
     <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
       <div className="max-w-5xl mx-auto">
         {/* Left Card - Formação Acadêmica */}
