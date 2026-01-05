@@ -12,31 +12,34 @@ const HumanIntuitionSection = () => {
             <div className="pulse-chip mb-4">
               <span>Sobre Mim</span>
             </div>
-            <h2 className="section-title mb-6">Desenvolvedor apaixonado por inovação</h2>
+            <h2 className="section-title mb-6">Desenvolvedor focado em criar soluções digitais sob medida</h2>
             <p className="text-lg text-gray-700 mb-6">
-              Sou Nathan Lopes, estudante de Sistemas de Informação na UFRN.
-              Tenho certificado de inglês pelo EF SET e trabalho como auxiliar no
-              laboratório de informática de uma escola. Meu interesse vai além da
-              tecnologia, incluindo gestão de pessoas e projetos.
+              Sou Nathan Lopes, desenvolvedor e empreendedor. Meu trabalho começa entendendo o problema do cliente e termina com uma solução digital funcional, escalável e alinhada ao negócio.
             </p>
-            <ul className="space-y-4">
-              {[
-                "Experiência em desenvolvimento com Python, C e Flutter/Dart",
-                "Conhecimento em metodologias ágeis (Scrum, XP, Crystal, SAFe)",
-                "Membro ativo da Ordem DeMolay e participante de iniciativas do Rotary",
-                "Empreendedor com experiência em gestão de negócios e pessoas"
-              ].map((item, index) => (
-                <li key={index} className="flex items-start">
-                  <div className="mr-3 text-pulse-500">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                      <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                    </svg>
-                  </div>
-                  <span className="text-gray-700">{item}</span>
-                </li>
-              ))}
-            </ul>
+            <p className="text-lg text-gray-700 mb-6">
+              Além disso, busco trazer uma visão de negócio e processo, o que me permite criar soluções que fazem sentido não só tecnicamente, mas também estrategicamente.
+            </p>
+            <div className="mb-6">
+              <p className="font-semibold text-gray-900 mb-3">O que você pode esperar do meu trabalho:</p>
+              <ul className="space-y-4">
+                {[
+                  "Desenvolvimento de soluções digitais sob medida",
+                  "Visão estratégica além do código",
+                  "Comunicação clara e acompanhamento próximo",
+                  "Foco em resolver problemas reais, não em vender pacotes prontos"
+                ].map((item, index) => (
+                  <li key={index} className="flex items-start">
+                    <div className="mr-3 text-pulse-500">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                      </svg>
+                    </div>
+                    <span className="text-gray-700">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
 
           <div className="relative mx-auto mt-10 lg:mt-0 max-w-sm lg:max-w-md">

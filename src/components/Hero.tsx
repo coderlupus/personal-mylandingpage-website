@@ -58,14 +58,14 @@ const Hero = () => {
             className="section-title text-3xl sm:text-4xl lg:text-5xl xl:text-6xl leading-tight opacity-0 animate-fade-in"
             style={{ animationDelay: "0.3s" }}
           >
-            Nathan Lopes<br className="hidden sm:inline" />Desenvolvedor & Empreendedor
+            Soluções digitais sob medida para o que o seu negócio realmente precisa
           </h1>
 
           <p
             style={{ animationDelay: "0.5s" }}
             className="section-subtitle mt-3 sm:mt-6 mb-4 sm:mb-8 leading-relaxed opacity-0 animate-fade-in text-gray-950 font-normal text-base sm:text-lg text-center mx-auto max-w-2xl"
           >
-            Estudante de Sistemas de Informação na UFRN, apaixonado por tecnologia e inovação.
+            sou Desenvolvedor e empreendedor. tenho o foco em entender o desafio do cliente para entregar soluções digitais personalizadas!
           </p>
 
           <div
@@ -87,7 +87,7 @@ const Hero = () => {
                 border: '1px solid white',
               }}
             >
-              Entre em Contato
+              Falar sobre meu projeto
               <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
             </a>
           </div>
