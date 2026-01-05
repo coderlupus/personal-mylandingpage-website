@@ -37,7 +37,7 @@ const allProjects: Project[] = [
         category: "Sistema de Gestão",
         description: "Sistema de gestão financeira desenvolvido em grupo como projeto de faculdade.",
         link: "https://github.com/oguiaraujo/SIG-Finance",
-        type: "academic",
+        type: "personal",
         year: "2024"
     },
     {
@@ -45,7 +45,7 @@ const allProjects: Project[] = [
         category: "Sistema de Gestão",
         description: "Sistema para gestão de cervejaria/distribuidora desenvolvido em grupo como projeto de faculdade.",
         link: "https://github.com/SamuelMorais45/SIG-Beer",
-        type: "academic",
+        type: "personal",
         year: "2024"
     },
     {
@@ -81,7 +81,7 @@ const allProjects: Project[] = [
         category: "E-commerce Front-end",
         description: "Interface moderna para uma loja de cookies.",
         link: "https://github.com/coderlupus/personal-krooc-cookies-website",
-        type: "personal",
+        type: "commercial",
         year: "2025"
     },
 
@@ -90,7 +90,7 @@ const allProjects: Project[] = [
         category: "Website Promocional",
         description: "Landing page para marca de cookies.",
         link: "https://github.com/coderlupus/personal-ravi-cookies-website",
-        type: "personal",
+        type: "commercial",
         year: "2025"
     },
 
@@ -126,6 +126,74 @@ const Projects = () => {
         window.scrollTo(0, 0);
     }, []);
 
+    const commercialProjects = allProjects.filter(p => p.type === "commercial");
+    const academicProjects = allProjects.filter(p => p.type === "academic");
+    const personalProjects = allProjects.filter(p => p.type === "personal");
+
+    const renderProjectSection = (title: string, projects: Project[]) => (
+        <div className="mb-16">
+            <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+                {title}
+                <span className="text-sm font-normal text-gray-500 bg-gray-100 px-2 py-1 rounded-full">
+                    {projects.length}
+                </span>
+            </h2>
+
+            <div className="grid grid-cols-1 gap-6">
+                {/* Table Header (Hidden on Mobile) - Only show for first section or simplify? 
+                    Let's hide distinct headers for cleaner look and just use card layout 
+                */}
+
+                {projects.map((project, index) => (
+                    <a
+                        key={index}
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-1 overflow-hidden border border-gray-100"
+                    >
+                        <div className="p-6 md:grid md:grid-cols-12 md:gap-4 md:items-center">
+                            {/* Mobile: Header */}
+                            <div className="flex justify-between items-start md:hidden mb-4">
+                                <span className="text-sm font-mono text-pulse-500">{project.year}</span>
+                                <ExternalLink className="w-5 h-5 text-gray-400" />
+                            </div>
+
+                            {/* Desktop: Year */}
+                            <div className="hidden md:block col-span-1 text-sm font-mono text-gray-400 group-hover:text-pulse-500 transition-colors">
+                                {project.year}
+                            </div>
+
+                            {/* Title */}
+                            <div className="col-span-3 mb-2 md:mb-0">
+                                <h3 className="text-lg font-bold text-gray-900 group-hover:text-pulse-600 transition-colors flex items-center gap-2">
+                                    {project.title}
+                                </h3>
+                            </div>
+
+                            {/* Category */}
+                            <div className="col-span-3 mb-2 md:mb-0">
+                                <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">
+                                    {project.category}
+                                </span>
+                            </div>
+
+                            {/* Description */}
+                            <div className="col-span-4 text-gray-600 text-sm mb-4 md:mb-0 line-clamp-2 md:line-clamp-1">
+                                {project.description}
+                            </div>
+
+                            {/* Link Icon */}
+                            <div className="col-span-1 hidden md:flex justify-end text-gray-400 group-hover:text-pulse-500 transition-colors">
+                                <ExternalLink className="w-5 h-5" />
+                            </div>
+                        </div>
+                    </a>
+                ))}
+            </div>
+        </div>
+    );
+
     return (
         <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto">
@@ -148,65 +216,19 @@ const Projects = () => {
                     </div>
                 </div>
 
-                {/* Project Grid */}
-                <div className="grid grid-cols-1 gap-6">
-                    {/* Table Header (Hidden on Mobile) */}
-                    <div className="hidden md:grid grid-cols-12 gap-4 text-sm font-semibold text-gray-500 border-b border-gray-200 pb-4 px-4">
-                        <div className="col-span-1">Ano</div>
-                        <div className="col-span-3">Projeto</div>
-                        <div className="col-span-3">Categoria</div>
-                        <div className="col-span-4">Descrição</div>
-                        <div className="col-span-1 text-right">Link</div>
-                    </div>
-
-                    {/* Project Items */}
-                    {allProjects.map((project, index) => (
-                        <a
-                            key={index}
-                            href={project.link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-1 overflow-hidden border border-gray-100"
-                        >
-                            <div className="p-6 md:grid md:grid-cols-12 md:gap-4 md:items-center">
-                                {/* Mobile: Header */}
-                                <div className="flex justify-between items-start md:hidden mb-4">
-                                    <span className="text-sm font-mono text-pulse-500">{project.year}</span>
-                                    <ExternalLink className="w-5 h-5 text-gray-400" />
-                                </div>
-
-                                {/* Desktop: Year */}
-                                <div className="hidden md:block col-span-1 text-sm font-mono text-gray-400 group-hover:text-pulse-500 transition-colors">
-                                    {project.year}
-                                </div>
-
-                                {/* Title */}
-                                <div className="col-span-3 mb-2 md:mb-0">
-                                    <h3 className="text-lg font-bold text-gray-900 group-hover:text-pulse-600 transition-colors flex items-center gap-2">
-                                        {project.title}
-                                    </h3>
-                                </div>
-
-                                {/* Category */}
-                                <div className="col-span-3 mb-2 md:mb-0">
-                                    <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">
-                                        {project.category}
-                                    </span>
-                                </div>
-
-                                {/* Description */}
-                                <div className="col-span-4 text-gray-600 text-sm mb-4 md:mb-0 line-clamp-2 md:line-clamp-1">
-                                    {project.description}
-                                </div>
-
-                                {/* Link Icon */}
-                                <div className="col-span-1 hidden md:flex justify-end text-gray-400 group-hover:text-pulse-500 transition-colors">
-                                    <ExternalLink className="w-5 h-5" />
-                                </div>
-                            </div>
-                        </a>
-                    ))}
+                {/* Project Columns Header - Visible once for alignment context */}
+                <div className="hidden md:grid grid-cols-12 gap-4 text-sm font-semibold text-gray-500 border-b border-gray-200 pb-4 px-4 mb-8">
+                    <div className="col-span-1">Ano</div>
+                    <div className="col-span-3">Projeto</div>
+                    <div className="col-span-3">Categoria</div>
+                    <div className="col-span-4">Descrição</div>
+                    <div className="col-span-1 text-right">Link</div>
                 </div>
+
+                {/* Sections */}
+                {commercialProjects.length > 0 && renderProjectSection("Projetos Reais", commercialProjects)}
+                {academicProjects.length > 0 && renderProjectSection("Projetos Acadêmicos", academicProjects)}
+                {personalProjects.length > 0 && renderProjectSection("Projetos de Estudo & Pessoais", personalProjects)}
             </div>
         </div>
     );
