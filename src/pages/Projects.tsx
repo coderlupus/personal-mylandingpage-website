@@ -9,6 +9,7 @@ interface Project {
     description: string;
     link: string;
     type: "commercial" | "academic" | "personal";
+    year: string;
 }
 
 const allProjects: Project[] = [
@@ -18,14 +19,16 @@ const allProjects: Project[] = [
         category: "Website Comercial",
         description: "Site institucional desenvolvido para a Stay SalMar, focado em experiência do usuário e conversão.",
         link: "https://www.staysalmar.com/",
-        type: "commercial"
+        type: "commercial",
+        year: "2025"
     },
     {
         title: "Nutri Patrícia Monteiro",
         category: "Website Profissional",
         description: "Portfólio e site de agendamento para nutricionista, com design limpo e responsivo.",
         link: "https://nutripatriciamonteiro.vercel.app",
-        type: "commercial"
+        type: "commercial",
+        year: "2026"
     },
 
     // Systems / Complex Apps
@@ -34,21 +37,24 @@ const allProjects: Project[] = [
         category: "Sistema de Gestão",
         description: "Sistema completo de gestão financeira desenvolvido em grupo.",
         link: "https://github.com/oguiaraujo/SIG-Finance",
-        type: "academic"
+        type: "academic",
+        year: "2024"
     },
     {
         title: "SIG Beer",
         category: "Sistema de Gestão",
         description: "Sistema para gestão de cervejaria/distribuidora.",
         link: "https://github.com/SamuelMorais45/SIG-Beer",
-        type: "academic"
+        type: "academic",
+        year: "2024"
     },
     {
         title: "Habits Tracker",
         category: "WebApp Produtividade",
         description: "Aplicação web para rastreamento de hábitos e produtividade pessoal.",
         link: "https://github.com/coderlupus/personal-habits-tracker-webapp",
-        type: "personal"
+        type: "personal",
+        year: "2025"
     },
 
     // Integration / API
@@ -57,14 +63,16 @@ const allProjects: Project[] = [
         category: "Integração API",
         description: "Aplicação front-end consumindo a API do Rick and Morty para listar personagens e detalhes.",
         link: "https://github.com/coderlupus/personal-rick-and-morty-api",
-        type: "personal"
+        type: "personal",
+        year: "2025"
     },
     {
         title: "AWS Infra Project",
         category: "Cloud & DevOps",
         description: "Projeto de infraestrutura utilizando serviços da AWS.",
         link: "https://github.com/coderlupus/personal-aws-project-infra",
-        type: "personal"
+        type: "personal",
+        year: "2025"
     },
 
     // Websites
@@ -73,21 +81,17 @@ const allProjects: Project[] = [
         category: "E-commerce Front-end",
         description: "Interface moderna para uma loja de cookies.",
         link: "https://github.com/coderlupus/personal-krooc-cookies-website",
-        type: "personal"
+        type: "personal",
+        year: "2025"
     },
-    {
-        title: "Sweet Sophia",
-        category: "Website Institucional",
-        description: "Site para confeitaria Sweet Sophia.",
-        link: "https://github.com/coderlupus/personal-sweet-sophia-website",
-        type: "personal"
-    },
+
     {
         title: "Ravi Cookies",
         category: "Website Promocional",
         description: "Landing page para marca de cookies.",
         link: "https://github.com/coderlupus/personal-ravi-cookies-website",
-        type: "personal"
+        type: "personal",
+        year: "2025"
     },
 
     // Others
@@ -96,21 +100,24 @@ const allProjects: Project[] = [
         category: "Educacional",
         description: "Projeto acadêmico interdisciplinar envolvendo inglês e literatura.",
         link: "https://github.com/coderlupus/academic-animal-farm-english-website",
-        type: "academic"
+        type: "academic",
+        year: "2025"
     },
     {
         title: "Research Ed Project",
         category: "Pesquisa & Educação",
         description: "Projeto de pesquisa educacional simulado.",
         link: "https://github.com/coderlupus/research-ed-project-sim",
-        type: "academic"
+        type: "academic",
+        year: "2025"
     },
     {
         title: "PyCustomer",
         category: "Scripting / Python",
         description: "Ferramenta de gestão de clientes feita em Python.",
         link: "https://replit.com/@nathanlopes089/BSI-PyCustomer-Projeto",
-        type: "personal"
+        type: "personal",
+        year: "2024"
     }
 ];
 
@@ -164,13 +171,13 @@ const Projects = () => {
                             <div className="p-6 md:grid md:grid-cols-12 md:gap-4 md:items-center">
                                 {/* Mobile: Header */}
                                 <div className="flex justify-between items-start md:hidden mb-4">
-                                    <span className="text-sm font-mono text-pulse-500">2024</span>
+                                    <span className="text-sm font-mono text-pulse-500">{project.year}</span>
                                     <ExternalLink className="w-5 h-5 text-gray-400" />
                                 </div>
 
                                 {/* Desktop: Year */}
                                 <div className="hidden md:block col-span-1 text-sm font-mono text-gray-400 group-hover:text-pulse-500 transition-colors">
-                                    2024
+                                    {project.year}
                                 </div>
 
                                 {/* Title */}
