@@ -8,8 +8,10 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { t, i18n } = useTranslation();
 
+  const isPortuguese = i18n.language?.startsWith('pt');
+
   const toggleLanguage = () => {
-    const newLang = i18n.language === 'pt' ? 'en' : 'pt';
+    const newLang = isPortuguese ? 'en' : 'pt';
     i18n.changeLanguage(newLang);
   };
 
@@ -91,7 +93,7 @@ const Navbar = () => {
             aria-label="Toggle language"
           >
             <Globe className="w-4 h-4" />
-            <span>{i18n.language === 'pt' ? 'BR' : 'EN'}</span>
+            <span>{isPortuguese ? 'BR' : 'EN'}</span>
           </button>
         </nav>
 
@@ -101,7 +103,7 @@ const Navbar = () => {
             onClick={toggleLanguage}
             className="flex items-center gap-1 px-2 py-1 rounded-full bg-gray-100/80 text-xs font-medium"
           >
-            <span>{i18n.language === 'pt' ? 'BR' : 'EN'}</span>
+            <span>{isPortuguese ? 'BR' : 'EN'}</span>
           </button>
 
           <button
