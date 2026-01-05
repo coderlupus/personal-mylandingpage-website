@@ -1,8 +1,9 @@
-
 import React, { useRef } from "react";
+import { useTranslation, Trans } from 'react-i18next';
 
-const HumanIntuitionSection = () => {
+const AboutSection = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
+  const { t } = useTranslation();
 
   return (
     <section className="py-12 bg-gray-50" id="about" ref={sectionRef}> {/* Reduced from py-20 */}
@@ -10,24 +11,19 @@ const HumanIntuitionSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="text-left">
             <div className="pulse-chip mb-4">
-              <span>Sobre Mim</span>
+              <span>{t('about.chip')}</span>
             </div>
-            <h2 className="section-title mb-6">Desenvolvedor focado em criar soluções digitais sob medida</h2>
+            <h2 className="section-title mb-6">{t('about.title')}</h2>
             <p className="text-lg text-gray-700 mb-6">
-              Sou Nathan Lopes, desenvolvedor e empreendedor. Meu trabalho começa entendendo a necessidade do cliente e <strong>buscando a melhor solução digital para cada contexto.</strong> Priorizo clareza, organização e soluções funcionais que façam sentido no dia a dia de quem usa.
+              <Trans i18nKey="about.description_1" components={{ bold: <strong /> }} />
             </p>
             <p className="text-lg text-gray-700 mb-6">
-              Além disso, tenho interesse em processos e visão de negócio, o que influencia diretamente a forma como planejo e desenvolvo cada projeto.
+              {t('about.description_2')}
             </p>
             <div className="mb-6">
-              <p className="font-semibold text-gray-900 mb-3">O que você pode esperar do meu trabalho:</p>
+              <p className="font-semibold text-gray-900 mb-3">{t('about.expectations_title')}</p>
               <ul className="space-y-4">
-                {[
-                  "Desenvolvimento de soluções digitais sob medida",
-                  "Abordagem cuidadosa e estratégica desde o início do projeto",
-                  "Comunicação clara e acompanhamento próximo",
-                  "Foco em resolver problemas reais, sem soluções engessadas"
-                ].map((item, index) => (
+                {(t('about.expectations_list', { returnObjects: true }) as string[]).map((item, index) => (
                   <li key={index} className="flex items-start">
                     <div className="mr-3 text-pulse-500">
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -56,4 +52,4 @@ const HumanIntuitionSection = () => {
   );
 };
 
-export default HumanIntuitionSection;
+export default AboutSection;

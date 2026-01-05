@@ -1,11 +1,17 @@
-
 import React, { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Globe } from "lucide-react";
+import { useTranslation } from 'react-i18next';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { t, i18n } = useTranslation();
+
+  const toggleLanguage = () => {
+    const newLang = i18n.language === 'pt' ? 'en' : 'pt';
+    i18n.changeLanguage(newLang);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -62,7 +68,7 @@ const Navbar = () => {
         </a>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex space-x-8">
+        <nav className="hidden md:flex items-center space-x-8">
           <a
             href="#"
             className="nav-link"
@@ -71,26 +77,44 @@ const Navbar = () => {
               scrollToTop();
             }}
           >
-            Home
+            {t('nav.home')}
           </a>
-          <a href="#about" className="nav-link">Sobre</a>
-          <a href="#skills" className="nav-link">Habilidades</a>
-          <a href="#projects" className="nav-link">Projetos</a>
-          <a href="#education" className="nav-link">Formação</a>
-          <a href="#contact" className="nav-link">Contato</a>
+          <a href="#about" className="nav-link">{t('nav.about')}</a>
+          <a href="#skills" className="nav-link">{t('nav.skills')}</a>
+          <a href="#projects" className="nav-link">{t('nav.projects')}</a>
+          <a href="#education" className="nav-link">{t('nav.education')}</a>
+          <a href="#contact" className="nav-link">{t('nav.contact')}</a>
+
+          <button
+            onClick={toggleLanguage}
+            className="flex items-center gap-1 px-3 py-1.5 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors text-sm font-medium"
+            aria-label="Toggle language"
+          >
+            <Globe className="w-4 h-4" />
+            <span>{i18n.language === 'pt' ? 'BR' : 'EN'}</span>
+          </button>
         </nav>
 
-        {/* Mobile menu button - increased touch target */}
-        <button
-          className="md:hidden text-gray-700 p-3 focus:outline-none"
-          onClick={toggleMenu}
-          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-        >
-          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        {/* Mobile menu button and lang toggle */}
+        <div className="flex items-center gap-4 md:hidden">
+          <button
+            onClick={toggleLanguage}
+            className="flex items-center gap-1 px-2 py-1 rounded-full bg-gray-100/80 text-xs font-medium"
+          >
+            <span>{i18n.language === 'pt' ? 'BR' : 'EN'}</span>
+          </button>
+
+          <button
+            className="text-gray-700 p-1 focus:outline-none"
+            onClick={toggleMenu}
+            aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+          >
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </div>
 
-      {/* Mobile Navigation - improved for better touch experience */}
+      {/* Mobile Navigation */}
       <div className={cn(
         "fixed inset-0 z-40 bg-white flex flex-col pt-16 px-6 md:hidden transition-all duration-300 ease-in-out",
         isMenuOpen ? "opacity-100 translate-x-0" : "opacity-0 translate-x-full pointer-events-none"
@@ -106,58 +130,27 @@ const Navbar = () => {
               document.body.style.overflow = '';
             }}
           >
-            Home
+            {t('nav.home')}
           </a>
-          <a
-            href="#about"
-            className="text-xl font-medium py-3 px-6 w-full text-center rounded-lg hover:bg-gray-100"
-            onClick={() => {
-              setIsMenuOpen(false);
-              document.body.style.overflow = '';
-            }}
-          >
-            Sobre
-          </a>
-          <a
-            href="#skills"
-            className="text-xl font-medium py-3 px-6 w-full text-center rounded-lg hover:bg-gray-100"
-            onClick={() => {
-              setIsMenuOpen(false);
-              document.body.style.overflow = '';
-            }}
-          >
-            Habilidades
-          </a>
-          <a
-            href="#projects"
-            className="text-xl font-medium py-3 px-6 w-full text-center rounded-lg hover:bg-gray-100"
-            onClick={() => {
-              setIsMenuOpen(false);
-              document.body.style.overflow = '';
-            }}
-          >
-            Projetos
-          </a>
-          <a
-            href="#education"
-            className="text-xl font-medium py-3 px-6 w-full text-center rounded-lg hover:bg-gray-100"
-            onClick={() => {
-              setIsMenuOpen(false);
-              document.body.style.overflow = '';
-            }}
-          >
-            Formação
-          </a>
-          <a
-            href="#contact"
-            className="text-xl font-medium py-3 px-6 w-full text-center rounded-lg hover:bg-gray-100"
-            onClick={() => {
-              setIsMenuOpen(false);
-              document.body.style.overflow = '';
-            }}
-          >
-            Contato
-          </a>
+          {[
+            { href: "#about", label: t('nav.about') },
+            { href: "#skills", label: t('nav.skills') },
+            { href: "#projects", label: t('nav.projects') },
+            { href: "#education", label: t('nav.education') },
+            { href: "#contact", label: t('nav.contact') }
+          ].map((item) => (
+            <a
+              key={item.href}
+              href={item.href}
+              className="text-xl font-medium py-3 px-6 w-full text-center rounded-lg hover:bg-gray-100"
+              onClick={() => {
+                setIsMenuOpen(false);
+                document.body.style.overflow = '';
+              }}
+            >
+              {item.label}
+            </a>
+          ))}
         </nav>
       </div>
     </header>

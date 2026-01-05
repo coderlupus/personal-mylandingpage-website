@@ -1,7 +1,7 @@
-
 import React, { useRef } from "react";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useTranslation } from 'react-i18next';
 
 interface TestimonialProps {
   content: string;
@@ -11,36 +11,6 @@ interface TestimonialProps {
   backgroundImage?: string;
   href?: string;
 }
-
-const projects: TestimonialProps[] = [{
-  content: "Sistema de agendamento online para clínica de estética, simplificando a gestão de horários. Frontend React e Backend integrados.",
-  author: "Agendamento Estética",
-  role: "Sistema Fullstack",
-  gradient: "from-pink-600 via-rose-500 to-orange-400",
-  backgroundImage: "/background-section1.png",
-  href: "https://github.com/fundaoimd/projeto_es_frontend"
-}, {
-  content: "Site institucional profissional desenvolvido com foco em performance e conversão, com design minimalista e responsivo.",
-  author: "Stay Salmar",
-  role: "Website Comercial",
-  gradient: "from-blue-700 via-indigo-800 to-purple-900",
-  backgroundImage: "/background-section2.png",
-  href: "https://www.staysalmar.com/"
-}, {
-  content: "Participação na escrita de livro e desenvolvimento de plataforma digital para obras relacionadas ao Nordeste e Sertão.",
-  author: "Plataforma Nordeste",
-  role: "Extensão & Cultura",
-  gradient: "from-orange-700 via-amber-600 to-yellow-500",
-  backgroundImage: "/background-section3.png",
-  href: "/documents/livro-nordeste.pdf"
-}, {
-  content: "Portfólio interativo para profissional da saúde, integrando blog e sistema de agendamento em uma interface acolhedora.",
-  author: "Nutri Patrícia Monteiro",
-  role: "Landing Page",
-  gradient: "from-green-600 via-emerald-500 to-teal-400",
-  backgroundImage: "/background-section1.png",
-  href: "https://nutripatriciamonteiro.vercel.app"
-}];
 
 const ProjectCard = ({
   content,
@@ -84,8 +54,41 @@ const ProjectCard = ({
   );
 };
 
-const Testimonials = () => {
+const FeaturedProjects = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
+  const { t } = useTranslation();
+
+  const projectsConfig = [
+    {
+      gradient: "from-pink-600 via-rose-500 to-orange-400",
+      backgroundImage: "/background-section1.png",
+      href: "https://github.com/fundaoimd/projeto_es_frontend"
+    },
+    {
+      gradient: "from-blue-700 via-indigo-800 to-purple-900",
+      backgroundImage: "/background-section2.png",
+      href: "https://www.staysalmar.com/"
+    },
+    {
+      gradient: "from-orange-700 via-amber-600 to-yellow-500",
+      backgroundImage: "/background-section3.png",
+      href: "/documents/livro-nordeste.pdf"
+    },
+    {
+      gradient: "from-green-600 via-emerald-500 to-teal-400",
+      backgroundImage: "/background-section1.png",
+      href: "https://nutripatriciamonteiro.vercel.app"
+    }
+  ];
+
+  const translatedItems = t('projects.items', { returnObjects: true }) as Array<{ content: string, author: string, role: string }>;
+
+  const projects: TestimonialProps[] = projectsConfig.map((config, index) => ({
+    ...config,
+    content: translatedItems[index]?.content || "",
+    author: translatedItems[index]?.author || "",
+    role: translatedItems[index]?.role || ""
+  }));
 
   return (
     <section className="py-20 bg-white relative" id="projects" ref={sectionRef}>
@@ -94,10 +97,10 @@ const Testimonials = () => {
           <div>
             <div className="pulse-chip mb-4">
               <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-pulse-500 text-white mr-2">4</span>
-              <span>Projetos</span>
+              <span>{t('projects.chip')}</span>
             </div>
             <h2 className="text-4xl md:text-5xl font-display font-bold text-gray-900">
-              Principais Projetos
+              {t('projects.title')}
             </h2>
           </div>
 
@@ -105,7 +108,7 @@ const Testimonials = () => {
             to="/projects"
             className="group flex items-center gap-2 text-gray-500 hover:text-gray-900 transition-colors py-2 border-b border-transparent hover:border-gray-900 relative z-20 cursor-pointer"
           >
-            <span className="font-medium text-sm tracking-wide">VER TODOS OS PROJETOS</span>
+            <span className="font-medium text-sm tracking-wide">{t('projects.view_all')}</span>
             <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
           </Link>
         </div>
@@ -129,4 +132,4 @@ const Testimonials = () => {
   );
 };
 
-export default Testimonials;
+export default FeaturedProjects;

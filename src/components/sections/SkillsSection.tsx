@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { cn } from "@/lib/utils";
 import { Code2, Database, Layout, Users, Brain, Rocket, Shield } from "lucide-react";
+import { useTranslation } from 'react-i18next';
 
 interface FeatureCardProps {
   icon: React.ReactNode;
@@ -55,8 +56,9 @@ const FeatureCard = ({ icon, title, description, index }: FeatureCardProps) => {
   );
 };
 
-const Features = () => {
+const SkillsSection = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -90,41 +92,41 @@ const Features = () => {
   const hardSkills = [
     {
       icon: <Code2 className="w-5 h-5 sm:w-6 sm:h-6" />,
-      title: "Linguagens & Ecossistema",
-      description: "Vivência acadêmica e prática com Python, C, Java, JavaScript/TypeScript e Dart. Uso cotidiano de VS Code e Git."
+      title: t('skills.items.languages.title'),
+      description: t('skills.items.languages.desc')
     },
     {
       icon: <Layout className="w-5 h-5 sm:w-6 sm:h-6" />,
-      title: "Front-end & Mobile",
-      description: "Construção de interfaces com React, Vue e Flutter. Prototipagem básica utilizando Figma, Canva e Affinity."
+      title: t('skills.items.frontend.title'),
+      description: t('skills.items.frontend.desc')
     },
     {
       icon: <Database className="w-5 h-5 sm:w-6 sm:h-6" />,
-      title: "Back-end & Dados",
-      description: "Experiência com Spring, MySQL, PostgreSQL e Firebase. Contato com Docker."
+      title: t('skills.items.backend.title'),
+      description: t('skills.items.backend.desc')
     },
     {
       icon: <Shield className="w-5 h-5 sm:w-6 sm:h-6" />,
-      title: "Temas de Interesse",
-      description: "Estudos introdutórios em Cibersegurança, Inteligência Artificial e Automação. Participação em eventos como GO!RN."
+      title: t('skills.items.interests.title'),
+      description: t('skills.items.interests.desc')
     }
   ];
 
   const softSkills = [
     {
       icon: <Users className="w-5 h-5 sm:w-6 sm:h-6" />,
-      title: "Liderança & Gestão",
-      description: "Gestão de projetos e liderança na ordem DeMolay. Organização, planejamento e visão estratégica."
+      title: t('skills.items.leadership.title'),
+      description: t('skills.items.leadership.desc')
     },
     {
       icon: <Brain className="w-5 h-5 sm:w-6 sm:h-6" />,
-      title: "Inteligência Estratégica",
-      description: "Adaptabilidade, resiliência e pensamento crítico. Capacidade de tomar decisões sob pressão e aprendizado autônomo."
+      title: t('skills.items.strategy.title'),
+      description: t('skills.items.strategy.desc')
     },
     {
       icon: <Rocket className="w-5 h-5 sm:w-6 sm:h-6" />,
-      title: "Colaboração & Comunicação",
-      description: "Empatia, escuta ativa e negociação. Trabalho em equipe com foco em resolução de conflitos e inovação."
+      title: t('skills.items.collaboration.title'),
+      description: t('skills.items.collaboration.desc')
     }
   ];
 
@@ -133,13 +135,13 @@ const Features = () => {
       <div className="section-container">
         <div className="text-center mb-10 sm:mb-16">
           <div className="pulse-chip mx-auto mb-3 sm:mb-4 opacity-0 fade-in-element">
-            <span>Competências</span>
+            <span>{t('skills.chip')}</span>
           </div>
           <h2 className="section-title mb-3 sm:mb-4 opacity-0 fade-in-element">
-            Vivências &<br className="hidden sm:block" /> Aprendizados
+            {t('skills.title')}
           </h2>
           <p className="section-subtitle mx-auto opacity-0 fade-in-element">
-            Um resumo das tecnologias com as quais já tive contato e tenho interesse, além das habilidades comportamentais que guiam minha jornada.
+            {t('skills.subtitle')}
           </p>
         </div>
 
@@ -147,7 +149,7 @@ const Features = () => {
         <div className="mb-12">
           <h3 className="text-xl sm:text-2xl font-bold text-gray-800 mb-6 flex items-center gap-2 opacity-0 fade-in-element">
             <span className="w-2 h-8 bg-pulse-500 rounded-full inline-block"></span>
-            Tech & Ferramentas
+            {t('skills.hard_title')}
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
             {hardSkills.map((skill, index) => (
@@ -166,7 +168,7 @@ const Features = () => {
         <div>
           <h3 className="text-xl sm:text-2xl font-bold text-gray-800 mb-6 flex items-center gap-2 opacity-0 fade-in-element delay-300">
             <span className="w-2 h-8 bg-green-500 rounded-full inline-block"></span>
-            Soft Skills & Liderança
+            {t('skills.soft_title')}
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
             {softSkills.map((skill, index) => (
@@ -186,4 +188,4 @@ const Features = () => {
   );
 };
 
-export default Features;
+export default SkillsSection;

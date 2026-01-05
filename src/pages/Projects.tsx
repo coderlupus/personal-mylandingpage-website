@@ -2,6 +2,7 @@
 import React, { useEffect } from "react";
 import { ArrowLeft, ExternalLink, Github } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useTranslation } from 'react-i18next';
 
 interface Project {
     title: string;
@@ -164,6 +165,8 @@ const allProjects: Project[] = [
 ];
 
 const Projects = () => {
+    const { t } = useTranslation();
+
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
@@ -235,16 +238,16 @@ const Projects = () => {
                 <div className="mb-12">
                     <Link to="/#projects" className="inline-flex items-center text-gray-500 hover:text-pulse-600 transition-colors mb-8 group">
                         <ArrowLeft className="w-5 h-5 mr-2 transform group-hover:-translate-x-1 transition-transform" />
-                        Voltar para Projetos
+                        {t('projects_page.back')}
                     </Link>
 
                     <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
                         <div>
                             <h1 className="text-4xl md:text-5xl font-display font-bold text-gray-900 mb-4">
-                                Arquivo de Projetos
+                                {t('projects_page.title')}
                             </h1>
                             <p className="text-lg text-gray-600 max-w-2xl">
-                                Uma coleção completa de trabalhos comerciais, acadêmicos, projetos pessoais e de extensão.
+                                {t('projects_page.subtitle')}
                             </p>
                         </div>
                     </div>
@@ -252,17 +255,17 @@ const Projects = () => {
 
                 {/* Project Columns Header - Visible once for alignment context */}
                 <div className="hidden md:grid grid-cols-12 gap-4 text-sm font-semibold text-gray-500 border-b border-gray-200 pb-4 px-4 mb-8">
-                    <div className="col-span-1">Ano</div>
-                    <div className="col-span-4">Projeto</div>
-                    <div className="col-span-6">Descrição</div>
-                    <div className="col-span-1 text-right">Link</div>
+                    <div className="col-span-1">{t('projects_page.table.year')}</div>
+                    <div className="col-span-4">{t('projects_page.table.project')}</div>
+                    <div className="col-span-6">{t('projects_page.table.desc')}</div>
+                    <div className="col-span-1 text-right">{t('projects_page.table.link')}</div>
                 </div>
 
                 {/* Sections */}
-                {commercialProjects.length > 0 && renderProjectSection("Projetos Reais", commercialProjects)}
-                {extensionProjects.length > 0 && renderProjectSection("Projetos de Extensão", extensionProjects)}
-                {academicProjects.length > 0 && renderProjectSection("Projetos Acadêmicos", academicProjects)}
-                {personalProjects.length > 0 && renderProjectSection("Projetos de Estudo & Treino", personalProjects)}
+                {commercialProjects.length > 0 && renderProjectSection(t('projects_page.sections.commercial'), commercialProjects)}
+                {extensionProjects.length > 0 && renderProjectSection(t('projects_page.sections.extension'), extensionProjects)}
+                {academicProjects.length > 0 && renderProjectSection(t('projects_page.sections.academic'), academicProjects)}
+                {personalProjects.length > 0 && renderProjectSection(t('projects_page.sections.personal'), personalProjects)}
             </div>
         </div>
     );

@@ -1,8 +1,10 @@
 import React from "react";
 import { Github, Linkedin, Mail } from "lucide-react";
+import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const { t } = useTranslation();
 
   return (
     <footer className="w-full bg-white border-t border-gray-100 py-12" id="contact">
@@ -17,7 +19,7 @@ const Footer = () => {
               />
             </a>
             <p className="text-gray-500 text-sm max-w-xs text-center md:text-left">
-              Desenvolvedor Full-Stack & Empreendedor focado em criar soluções inovadoras.
+              {t('footer.desc')}
             </p>
           </div>
 
@@ -39,7 +41,7 @@ const Footer = () => {
               </a>
             </div>
             <p className="text-gray-400 text-sm text-center md:text-right">
-              &copy; {currentYear} Nathan Lopes. Todos os direitos reservados.
+              &copy; {currentYear} Nathan Lopes. {t('footer.rights')}
             </p>
           </div>
         </div>

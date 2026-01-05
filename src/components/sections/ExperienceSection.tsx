@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import { useTranslation } from 'react-i18next';
 
 interface ExperienceProps {
   content: string;
@@ -7,32 +8,6 @@ interface ExperienceProps {
   period: string;
   backgroundImage?: string;
 }
-
-const experiences: ExperienceProps[] = [{
-  content: "Gerenciei estoque, organizei pedidos, realizei atendimento ao cliente, identifiquei tendências de mercado e negociei com fornecedores. Controlei finanças e desenvolvi estratégias para aumentar vendas.",
-  author: "SILTHAN SPORTS",
-  role: "Fundador e CEO",
-  period: "Mar/2023 – Out/2023",
-  backgroundImage: "/background-section1.png"
-}, {
-  content: "Planejava e executava projetos personalizados, criava listas de prospecção, realizava contatos ativos, conduzia reuniões e entregava soluções. Analisava o cenário do cliente e desenvolvia estratégias.",
-  author: "F1 RISING",
-  role: "Fundador e CEO",
-  period: "Dez/2024 – Presente",
-  backgroundImage: "/background-section2.png"
-}, {
-  content: "Auxilio no laboratório de informática de uma escola, oferecendo suporte técnico, manutenção de equipamentos e apoio aos alunos com tecnologia educacional.",
-  author: "Laboratório de Informática",
-  role: "Auxiliar Técnico",
-  period: "Ago/2025 - Presente ",
-  backgroundImage: "/background-section3.png"
-}, {
-  content: "Participação ativa há vários anos, contribuindo para o desenvolvimento de jovens líderes e participando de iniciativas comunitárias ajudando a sociedade.",
-  author: "Ordem DeMolay",
-  role: "Membro Voluntário",
-  period: "2019 - Presente",
-  backgroundImage: "/background-section1.png"
-}];
 
 const ExperienceCard = ({
   content,
@@ -62,6 +37,24 @@ const ExperienceCard = ({
 
 const ExperienceSection = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
+  const { t } = useTranslation();
+
+  const experienceConfig = [
+    { backgroundImage: "/background-section1.png" },
+    { backgroundImage: "/background-section2.png" },
+    { backgroundImage: "/background-section3.png" },
+    { backgroundImage: "/background-section1.png" }
+  ];
+
+  const translatedItems = t('experience.items', { returnObjects: true }) as Array<{ content: string, author: string, role: string, period: string }>;
+
+  const experiences: ExperienceProps[] = experienceConfig.map((config, index) => ({
+    ...config,
+    content: translatedItems[index]?.content || "",
+    author: translatedItems[index]?.author || "",
+    role: translatedItems[index]?.role || "",
+    period: translatedItems[index]?.period || ""
+  }));
 
   return (
     <section className="py-12 bg-gray-50 relative" id="experience" ref={sectionRef}>
@@ -69,11 +62,11 @@ const ExperienceSection = () => {
         <div className="flex items-center gap-4 mb-6">
           <div className="pulse-chip">
             <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-pulse-500 text-white mr-2">5</span>
-            <span>Experiências</span>
+            <span>{t('experience.chip')}</span>
           </div>
         </div>
 
-        <h2 className="text-5xl font-display font-bold mb-12 text-left">Experiência Profissional</h2>
+        <h2 className="text-5xl font-display font-bold mb-12 text-left">{t('experience.title')}</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {experiences.map((experience, index) => (
