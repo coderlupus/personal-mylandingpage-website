@@ -14,7 +14,7 @@ interface TestimonialProps {
 
 const projects: TestimonialProps[] = [{
   content: "Site institucional profissional desenvolvido com foco em performance e conversão, com design minimalista e responsivo.",
-  author: "Stay SalMar",
+  author: "Stay Salmar",
   role: "Website Comercial",
   gradient: "from-blue-700 via-indigo-800 to-purple-900",
   backgroundImage: "/background-section1.png",
@@ -22,7 +22,7 @@ const projects: TestimonialProps[] = [{
 }, {
   content: "Portfólio interativo para profissional da saúde, integrando blog e sistema de agendamento em uma interface acolhedora.",
   author: "Nutri Patrícia Monteiro",
-  role: "Website & Portfólio",
+  role: "Landing page",
   gradient: "from-indigo-900 via-purple-800 to-orange-500",
   backgroundImage: "/background-section2.png",
   href: "https://nutripatriciamonteiro.vercel.app"

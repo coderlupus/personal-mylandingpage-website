@@ -7,8 +7,8 @@ interface Project {
     title: string;
     category: string;
     description: string;
-    link: string;
-    type: "commercial" | "academic" | "personal";
+    link?: string;
+    type: "commercial" | "academic" | "personal" | "extension";
     year: string;
 }
 
@@ -29,6 +29,40 @@ const allProjects: Project[] = [
         link: "https://nutripatriciamonteiro.vercel.app",
         type: "commercial",
         year: "2026"
+    },
+
+    // Extension Projects
+    {
+        title: "Material Paradidático - Libras",
+        category: "Extensão Universitária",
+        description: "Produção de material paradidático para o ensino de alunos surdos em Caicó. Membro da equipe executora.",
+        link: "/documents/declaracao-libras.png",
+        type: "extension",
+        year: "2025"
+    },
+    {
+        title: "Plano de negócios e automação - Estética",
+        category: "Extensão Universitária",
+        description: "Plano de automação para empreendimento de estética.",
+        link: "/documents/certificado-automacao-estetica.png",
+        type: "extension",
+        year: "2025"
+    },
+    {
+        title: "Plano de Negócio - Automotivo",
+        category: "Extensão Universitária",
+        description: "Elaboração de plano de negócio para o ramo automotivo (TGA 01). 40 horas de atividades.",
+        link: "/documents/certificado-plano-negocio-automotivo.png",
+        type: "extension",
+        year: "2024"
+    },
+    {
+        title: "Plataforma Digital - Nordeste",
+        category: "Extensão & Literatura",
+        description: "Participação na escrita de livro e desenvolvimento de plataforma digital para obras relacionadas ao Nordeste e Sertão (Projeto I.7).",
+        link: "/documents/livro-nordeste.pdf",
+        type: "extension",
+        year: "2025"
     },
 
     // Systems / Complex Apps
@@ -129,6 +163,7 @@ const Projects = () => {
     const commercialProjects = allProjects.filter(p => p.type === "commercial");
     const academicProjects = allProjects.filter(p => p.type === "academic");
     const personalProjects = allProjects.filter(p => p.type === "personal");
+    const extensionProjects = allProjects.filter(p => p.type === "extension");
 
     const renderProjectSection = (title: string, projects: Project[]) => (
         <div className="mb-16">
@@ -145,18 +180,16 @@ const Projects = () => {
                 */}
 
                 {projects.map((project, index) => (
-                    <a
+                    <div
                         key={index}
-                        href={project.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-1 overflow-hidden border border-gray-100"
+                        className={`group block bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-1 overflow-hidden border border-gray-100 ${project.link ? 'cursor-pointer' : ''}`}
+                        onClick={() => project.link && window.open(project.link, '_blank')}
                     >
                         <div className="p-6 md:grid md:grid-cols-12 md:gap-4 md:items-center">
                             {/* Mobile: Header */}
                             <div className="flex justify-between items-start md:hidden mb-4">
                                 <span className="text-sm font-mono text-pulse-500">{project.year}</span>
-                                <ExternalLink className="w-5 h-5 text-gray-400" />
+                                {project.link && <ExternalLink className="w-5 h-5 text-gray-400" />}
                             </div>
 
                             {/* Desktop: Year */}
@@ -178,10 +211,10 @@ const Projects = () => {
 
                             {/* Link Icon */}
                             <div className="col-span-1 hidden md:flex justify-end text-gray-400 group-hover:text-pulse-500 transition-colors">
-                                <ExternalLink className="w-5 h-5" />
+                                {project.link && <ExternalLink className="w-5 h-5" />}
                             </div>
                         </div>
-                    </a>
+                    </div>
                 ))}
             </div>
         </div>
@@ -203,7 +236,7 @@ const Projects = () => {
                                 Arquivo de Projetos
                             </h1>
                             <p className="text-lg text-gray-600 max-w-2xl">
-                                Uma coleção completa de trabalhos comerciais, acadêmicos e projetos pessoais de desenvolvimento.
+                                Uma coleção completa de trabalhos comerciais, acadêmicos, projetos pessoais e de extensão.
                             </p>
                         </div>
                     </div>
@@ -219,6 +252,7 @@ const Projects = () => {
 
                 {/* Sections */}
                 {commercialProjects.length > 0 && renderProjectSection("Projetos Reais", commercialProjects)}
+                {extensionProjects.length > 0 && renderProjectSection("Projetos de Extensão", extensionProjects)}
                 {academicProjects.length > 0 && renderProjectSection("Projetos Acadêmicos", academicProjects)}
                 {personalProjects.length > 0 && renderProjectSection("Projetos de Estudo & Treino", personalProjects)}
             </div>
