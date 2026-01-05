@@ -1,19 +1,19 @@
-
 import React, { useEffect } from "react";
-import Navbar from "@/components/Navbar";
-import Hero from "@/components/Hero";
-import HumanoidSection from "@/components/HumanIntuitionSection";
-import SpecsSection from "@/components/SpecsSection";
-import DetailsSection from "@/components/DetailsSection";
-import ImageShowcaseSection from "@/components/ImageShowcaseSection";
-import Features from "@/components/Features";
-import Testimonials from "@/components/Testimonials";
-import ExperienceSection from "@/components/ExperienceSection";
-import Newsletter from "@/components/Newsletter";
-import MadeByHumans from "@/components/MadeByHumans";
-import Footer from "@/components/Footer";
+import { useLocation } from "react-router-dom";
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
+import Hero from "@/components/sections/Hero";
+import HeroSubtitle from "@/components/sections/HeroSubtitle";
+import AboutSection from "@/components/sections/AboutSection";
+import SkillsSection from "@/components/sections/SkillsSection";
+import FeaturedProjects from "@/components/sections/FeaturedProjects";
+import ExperienceSection from "@/components/sections/ExperienceSection";
+import EducationSection from "@/components/sections/EducationSection";
+import EndCredit from "@/components/layout/EndCredit";
 
 const Index = () => {
+  const location = useLocation();
+
   // Initialize intersection observer to detect when elements enter viewport
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -36,8 +36,27 @@ const Index = () => {
     };
   }, []);
 
+  // Handle hash scrolling on mount or when hash changes
   useEffect(() => {
-    // This helps ensure smooth scrolling for the anchor links
+    if (location.hash) {
+      const targetId = location.hash.substring(1);
+
+      // Small timeout to ensure DOM is ready
+      setTimeout(() => {
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+          const offset = window.innerWidth < 768 ? 100 : 80;
+          window.scrollTo({
+            top: targetElement.offsetTop - offset,
+            behavior: 'smooth'
+          });
+        }
+      }, 100);
+    }
+  }, [location.hash]); // Depend on location.hash
+
+  useEffect(() => {
+    // This helps ensure smooth scrolling for the anchor links within the page
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -64,14 +83,13 @@ const Index = () => {
       <Navbar />
       <main className="space-y-4 sm:space-y-8"> {/* Reduced space on mobile */}
         <Hero />
-        <HumanoidSection />
-        <SpecsSection />
-        <Features />
-        <Testimonials />
+        <AboutSection />
+        <HeroSubtitle />
+        <SkillsSection />
+        <FeaturedProjects />
         <ExperienceSection />
-        <DetailsSection />
-
-        <MadeByHumans />
+        <EducationSection />
+        <EndCredit />
       </main>
       <Footer />
     </div>

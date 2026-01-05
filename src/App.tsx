@@ -6,7 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import Projects from "./pages/Projects";
 import NotFound from "./pages/NotFound";
-import { SmoothScroll } from "./components/SmoothScroll";
+import { SmoothScroll } from "./components/layout/SmoothScroll";
 
 const queryClient = new QueryClient();
 
