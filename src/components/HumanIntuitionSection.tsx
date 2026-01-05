@@ -14,9 +14,9 @@ const HumanIntuitionSection = () => {
             </div>
             <h2 className="section-title mb-6">Desenvolvedor apaixonado por inovação</h2>
             <p className="text-lg text-gray-700 mb-6">
-              Sou Nathan Lopes, estudante de Sistemas de Informação na UFRN. 
-              Tenho certificado de inglês pelo EF SET e trabalho como auxiliar no 
-              laboratório de informática de uma escola. Meu interesse vai além da 
+              Sou Nathan Lopes, estudante de Sistemas de Informação na UFRN.
+              Tenho certificado de inglês pelo EF SET e trabalho como auxiliar no
+              laboratório de informática de uma escola. Meu interesse vai além da
               tecnologia, incluindo gestão de pessoas e projetos.
             </p>
             <ul className="space-y-4">
