@@ -165,21 +165,14 @@ const Projects = () => {
                             </div>
 
                             {/* Title */}
-                            <div className="col-span-3 mb-2 md:mb-0">
+                            <div className="col-span-4 mb-2 md:mb-0">
                                 <h3 className="text-lg font-bold text-gray-900 group-hover:text-pulse-600 transition-colors flex items-center gap-2">
                                     {project.title}
                                 </h3>
                             </div>
 
-                            {/* Category */}
-                            <div className="col-span-3 mb-2 md:mb-0">
-                                <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">
-                                    {project.category}
-                                </span>
-                            </div>
-
                             {/* Description */}
-                            <div className="col-span-4 text-gray-600 text-sm mb-4 md:mb-0 line-clamp-2 md:line-clamp-1">
+                            <div className="col-span-6 text-gray-600 text-sm mb-4 md:mb-0 line-clamp-2 md:line-clamp-1">
                                 {project.description}
                             </div>
 
@@ -219,16 +212,15 @@ const Projects = () => {
                 {/* Project Columns Header - Visible once for alignment context */}
                 <div className="hidden md:grid grid-cols-12 gap-4 text-sm font-semibold text-gray-500 border-b border-gray-200 pb-4 px-4 mb-8">
                     <div className="col-span-1">Ano</div>
-                    <div className="col-span-3">Projeto</div>
-                    <div className="col-span-3">Categoria</div>
-                    <div className="col-span-4">Descrição</div>
+                    <div className="col-span-4">Projeto</div>
+                    <div className="col-span-6">Descrição</div>
                     <div className="col-span-1 text-right">Link</div>
                 </div>
 
                 {/* Sections */}
                 {commercialProjects.length > 0 && renderProjectSection("Projetos Reais", commercialProjects)}
                 {academicProjects.length > 0 && renderProjectSection("Projetos Acadêmicos", academicProjects)}
-                {personalProjects.length > 0 && renderProjectSection("Projetos de Estudo & Pessoais", personalProjects)}
+                {personalProjects.length > 0 && renderProjectSection("Projetos de Estudo & Treino", personalProjects)}
             </div>
         </div>
     );
