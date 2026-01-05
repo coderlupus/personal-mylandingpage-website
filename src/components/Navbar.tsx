@@ -55,9 +55,9 @@ const Navbar = () => {
           aria-label="Nathan Lopes"
         >
           <img
-            src="/nathan-logo.png"
+            src="/nathan-logo-new.png"
             alt="Nathan Lopes Logo"
-            className="h-10 sm:h-14 w-auto object-contain"
+            className="h-9 sm:h-12 w-auto object-contain"
           />
         </a>
 

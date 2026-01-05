@@ -42,12 +42,12 @@ const ExperienceCard = ({
   backgroundImage = "/background-section1.png"
 }: ExperienceProps) => {
   return (
-    <div 
-      className="bg-cover bg-center rounded-lg p-8 h-full flex flex-col justify-between text-white transform transition-transform duration-300 hover:-translate-y-2 relative overflow-hidden" 
+    <div
+      className="bg-cover bg-center rounded-lg p-8 h-full flex flex-col justify-between text-white transform transition-transform duration-300 hover:-translate-y-2 relative overflow-hidden"
       style={{ backgroundImage: `url('${backgroundImage}')` }}
     >
-      <div className="absolute top-0 right-0 w-24 h-24 bg-white z-10"></div>
-      
+
+
       <div className="relative z-0">
         <p className="text-xl mb-8 font-medium leading-relaxed pr-20">{content}</p>
         <div>
@@ -72,18 +72,18 @@ const ExperienceSection = () => {
             <span>Experiências</span>
           </div>
         </div>
-        
+
         <h2 className="text-5xl font-display font-bold mb-12 text-left">Experiência Profissional</h2>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {experiences.map((experience, index) => (
-            <ExperienceCard 
-              key={index} 
-              content={experience.content} 
-              author={experience.author} 
-              role={experience.role} 
+            <ExperienceCard
+              key={index}
+              content={experience.content}
+              author={experience.author}
+              role={experience.role}
               period={experience.period}
-              backgroundImage={experience.backgroundImage} 
+              backgroundImage={experience.backgroundImage}
             />
           ))}
         </div>
