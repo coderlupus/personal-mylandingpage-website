@@ -103,6 +103,7 @@ const Navbar = () => {
             onClick={toggleLanguage}
             className="flex items-center gap-1 px-2 py-1 rounded-full bg-gray-100/80 text-xs font-medium"
           >
+            <Globe className="w-3 h-3" />
             <span>{isPortuguese ? 'BR' : 'EN'}</span>
           </button>
 
