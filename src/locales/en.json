@@ -1,5 +1,8 @@
 {
     "translation": {
+        "meta": {
+            "title": "Nathan Lopes | Developer & Entrepreneur"
+        },
         "nav": {
             "home": "Home",
             "about": "About",
@@ -176,6 +179,65 @@
                 "ethics": "Ethics / Law / Philosophy",
                 "internship": "Internship & Final Project"
             }
+        },
+        "certifications": {
+            "title": "Certifications & Courses",
+            "items": [
+                {
+                    "name": "Potência Tech iFood - Programming from Scratch",
+                    "issuer": "DIO / iFood",
+                    "date": "2023",
+                    "file": "/documents/bootcamp tech power ifood.pdf"
+                },
+                {
+                    "name": "Hackers do Bem - Cybersecurity",
+                    "issuer": "RNP",
+                    "date": "2024",
+                    "file": "/documents/Certificate - hackers do bem.pdf"
+                },
+                {
+                    "name": "Coletivo Jovem (Youth Collective)",
+                    "issuer": "Coca-Cola",
+                    "date": "2023",
+                    "file": "/documents/coca-cola-youth.pdf"
+                },
+                {
+                    "name": "Santander - Cybersecurity 2025",
+                    "issuer": "Santander / DIO",
+                    "date": "2024",
+                    "file": "/documents/cybersecurity santander.pdf"
+                },
+                {
+                    "name": "Working in Agile Teams",
+                    "issuer": "DIO",
+                    "date": "2023",
+                    "file": "/documents/equipesageis.pdf"
+                },
+                {
+                    "name": "Excel",
+                    "issuer": "Santander Open Academy",
+                    "date": "2023",
+                    "file": "/documents/excel.pdf"
+                },
+                {
+                    "name": "Leadership",
+                    "issuer": "Santander Open Academy",
+                    "date": "2023",
+                    "file": "/documents/leadership.pdf"
+                },
+                {
+                    "name": "Responsible prompting: maximize AI in your business",
+                    "issuer": "Microsoft / Foundarz",
+                    "date": "2023",
+                    "file": "/documents/prompt responsavel.pdf"
+                },
+                {
+                    "name": "Scrum Master Certification",
+                    "issuer": "DIO",
+                    "date": "2023",
+                    "file": "/documents/scrum certification.pdf"
+                }
+            ]
         },
         "footer": {
             "desc": "Full-Stack Developer & Entrepreneur focused on creating innovative solutions.",

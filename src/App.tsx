@@ -10,12 +10,26 @@ import { SmoothScroll } from "./components/layout/SmoothScroll";
 
 const queryClient = new QueryClient();
 
+import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
+
+const TitleUpdater = () => {
+  const { t } = useTranslation();
+
+  useEffect(() => {
+    document.title = t('meta.title');
+  }, [t]);
+
+  return null;
+};
+
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <SmoothScroll>
         <Toaster />
         <Sonner />
+        <TitleUpdater />
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Index />} />

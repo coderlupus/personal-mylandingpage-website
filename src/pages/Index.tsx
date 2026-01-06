@@ -9,6 +9,7 @@ import SkillsSection from "@/components/sections/SkillsSection";
 import FeaturedProjects from "@/components/sections/FeaturedProjects";
 import ExperienceSection from "@/components/sections/ExperienceSection";
 import EducationSection from "@/components/sections/EducationSection";
+import CertificationsSection from "@/components/sections/CertificationsSection";
 import EndCredit from "@/components/layout/EndCredit";
 
 const Index = () => {
@@ -88,7 +89,20 @@ const Index = () => {
         <SkillsSection />
         <FeaturedProjects />
         <ExperienceSection />
-        <EducationSection />
+        <section id="education" className="w-full bg-white py-0">
+          <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
+            <div className="max-w-7xl mx-auto">
+              <div className="grid grid-cols-1 xl:grid-cols-3 gap-6 sm:gap-8 min-h-[500px]">
+                <div className="xl:col-span-2 h-full">
+                  <EducationSection />
+                </div>
+                <div className="xl:col-span-1 h-full">
+                  <CertificationsSection />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
         <EndCredit />
       </main>
       <Footer />
