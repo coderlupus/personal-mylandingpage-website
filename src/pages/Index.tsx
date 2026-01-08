@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import Hero from "@/components/sections/Hero";
@@ -14,8 +15,10 @@ import EndCredit from "@/components/layout/EndCredit";
 
 const Index = () => {
   const location = useLocation();
+  const { i18n } = useTranslation();
 
   // Initialize intersection observer to detect when elements enter viewport
+  // Re-runs when language changes to observe newly created elements
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -35,7 +38,7 @@ const Index = () => {
     return () => {
       elements.forEach((el) => observer.unobserve(el));
     };
-  }, []);
+  }, [i18n.language]); // Re-run when language changes
 
   // Handle hash scrolling on mount or when hash changes
   useEffect(() => {
