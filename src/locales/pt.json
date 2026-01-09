@@ -6,20 +6,25 @@
         "nav": {
             "home": "Home",
             "about": "Sobre",
-            "skills": "Habilidades",
+            "services": "Serviços",
             "projects": "Projetos",
-            "experience": "Experiência",
-            "education": "Formação",
             "contact": "Contato"
         },
         "hero": {
-            "title": "Soluções digitais sob medida para o que o seu negócio realmente precisa",
+            "title": "Soluções digitais sob medida para o que o seu negócio <highlight>realmente precisa</highlight>",
             "subtitle": "Sou desenvolvedor e empreendedor. Tenho o foco em entender o desafio do cliente para entregar soluções digitais personalizadas!",
-            "cta": "Falar sobre meu projeto"
+            "cta": "Falar sobre meu projeto",
+            "cta_secondary": "Ver projetos"
+        },
+        "cta": {
+            "title": "Tem um projeto em mente?",
+            "subtitle": "Vamos conversar e transformar sua ideia em realidade.",
+            "button_whatsapp": "Falar no WhatsApp",
+            "button_email": "Enviar email"
         },
         "about": {
             "chip": "Sobre Mim",
-            "title": "Desenvolvedor focado em criar soluções digitais sob medida",
+            "title": "Desenvolvedor focado na necessidade do cliente",
             "description_1": "Sou Nathan Lopes, desenvolvedor e empreendedor. Meu trabalho começa entendendo a necessidade do cliente e <bold>buscando a melhor solução digital para cada contexto.</bold> Priorizo clareza, organização e soluções funcionais que façam sentido no dia a dia de quem usa.",
             "description_2": "Além disso, tenho interesse em processos e visão de negócio, o que influencia diretamente a forma como planejo e desenvolvo cada projeto.",
             "expectations_title": "O que você pode esperar do meu trabalho:",
@@ -30,50 +35,33 @@
                 "Foco em resolver problemas reais, sem soluções engessadas"
             ]
         },
-        "hero_subtitle": {
-            "chip": "Habilidades",
-            "text": "Desenvolvedor em formação com paixão por tecnologia e gestão. Já tive contato com múltiplas linguagens e metodologias ágeis, sempre buscando soluções inovadoras para problemas reais."
-        },
-        "skills": {
-            "chip": "Competências",
-            "title": "Vivências & Aprendizados",
-            "subtitle": "Um resumo das tecnologias com as quais já tive contato e tenho interesse, além das habilidades comportamentais que guiam minha jornada.",
-            "hard_title": "Tech & Ferramentas",
-            "soft_title": "Soft Skills & Liderança",
+        "services": {
+            "chip": "Serviços",
+            "title": "O que eu posso fazer por você",
+            "subtitle": "Transformo ideias em soluções digitais funcionais. O que eu não souber, eu aprendo.",
+            "cta": "Falar sobre meu projeto",
             "items": {
-                "languages": {
-                    "title": "Linguagens & Ecossistema",
-                    "desc": "Vivência acadêmica e prática com Python, C, Java, JavaScript/TypeScript e Dart. Uso cotidiano de VS Code e Git."
+                "websites": {
+                    "title": "Sites & Portfólios",
+                    "desc": "Sites institucionais e portfólios profissionais que transmitem credibilidade e convertem visitantes."
                 },
-                "frontend": {
-                    "title": "Front-end & Mobile",
-                    "desc": "Construção de interfaces com React, Vue e Flutter. Prototipagem básica utilizando Figma, Canva e Affinity."
+                "landing": {
+                    "title": "Landing Pages",
+                    "desc": "Páginas otimizadas para conversão, perfeitas para campanhas, lançamentos e captação de leads."
                 },
-                "backend": {
-                    "title": "Back-end & Dados",
-                    "desc": "Experiência com Spring, MySQL, PostgreSQL e Firebase. Contato com Docker."
+                "systems": {
+                    "title": "Apps & Sistemas Web",
+                    "desc": "Aplicações personalizadas para automatizar processos, dashboards e facilitar a gestão do seu negócio."
                 },
-                "interests": {
-                    "title": "Temas de Interesse",
-                    "desc": "Estudos introdutórios em Cibersegurança, Inteligência Artificial e Automação. Participação em eventos como GO!RN."
-                },
-                "leadership": {
-                    "title": "Liderança & Gestão",
-                    "desc": "Gestão de projetos e liderança na ordem DeMolay. Organização, planejamento e visão estratégica."
-                },
-                "strategy": {
-                    "title": "Inteligência Estratégica",
-                    "desc": "Adaptabilidade, resiliência e pensamento crítico. Capacidade de tomar decisões sob pressão e aprendizado autônomo."
-                },
-                "collaboration": {
-                    "title": "Colaboração & Comunicação",
-                    "desc": "Empatia, escuta ativa e negociação. Trabalho em equipe com foco em resolução de conflitos e inovação."
+                "automation": {
+                    "title": "Automação & Bots",
+                    "desc": "Chatbots, integrações e automações para otimizar tarefas repetitivas e ganhar produtividade."
                 }
             }
         },
         "projects": {
             "chip": "Projetos",
-            "title": "Principais Projetos",
+            "title": "Trabalhos Recentes",
             "view_all": "VER TODOS OS PROJETOS",
             "items": [
                 {
@@ -98,145 +86,65 @@
                 }
             ]
         },
-        "experience": {
-            "chip": "Experiências",
-            "title": "Experiência Profissional",
-            "items": [
-                {
-                    "content": "Gerenciei estoque, organizei pedidos, realizei atendimento ao cliente, identifiquei tendências de mercado e negociei com fornecedores. Controlei finanças e desenvolvi estratégias para aumentar vendas.",
-                    "author": "SILTHAN SPORTS",
-                    "role": "Fundador e CEO",
-                    "period": "Mar/2023 – Out/2023"
-                },
-                {
-                    "content": "Planejava e executava projetos personalizados, criava listas de prospecção, realizava contatos ativos, conduzia reuniões e entregava soluções. Analisava o cenário do cliente e desenvolvia estratégias.",
-                    "author": "F1 RISING",
-                    "role": "Fundador e CEO",
-                    "period": "Mai/2025 – Jul/2025"
-                },
-                {
-                    "content": "Auxilio no laboratório de informática de uma escola, oferecendo suporte técnico, manutenção de equipamentos e apoio aos alunos com tecnologia educacional.",
-                    "author": "Laboratório de Informática",
-                    "role": "Auxiliar Técnico",
-                    "period": "Ago/2025 - Presente"
-                },
-                {
-                    "content": "Participação ativa há vários anos, contribuindo para o desenvolvimento de jovens líderes e participando de iniciativas comunitárias ajudando a sociedade.",
-                    "author": "Ordem DeMolay",
-                    "role": "Membro Voluntário",
-                    "period": "2019 - Presente"
-                }
-            ]
-        },
-        "education": {
-            "title": "Formação Acadêmica",
-            "course": "Sistemas de Informação",
-            "university": "Universidade Federal do Rio Grande do Norte (UFRN)",
-            "start": "Início: Fev 2024",
-            "end": "Previsão: Fev 2028",
-            "degree": "Bacharelado",
-            "legend_completed": "Disciplinas Cursadas/Em Curso",
-            "legend_future": "A Cursar",
-            "categories": {
-                "software": "Desenvolvimento de Software",
-                "engineering": "Engenharia & Infraestrutura",
-                "math": "Matemática & Fundamentos",
-                "management": "Gestão, Humanas & Prática"
+        "credentials": {
+            "chip": "Formação",
+            "title": "Formação & Certificações",
+            "trained_by": "Certificado por",
+            "education": {
+                "title": "Sistemas de Informação",
+                "desc": "Bacharelado na UFRN (Universidade Federal do Rio Grande do Norte) - em andamento desde 2024."
             },
-            "subjects": {
-                "algo": "Algoritmos e Lógica de Programação",
-                "prog": "Programação",
-                "poo1": "Programação Orientada a Objetos I",
-                "data_struct": "Estrutura de Dados",
-                "web": "Programação Web",
-                "db": "Banco de Dados",
-                "poo2": "Programação Orientada a Objetos II",
-                "db_project": "Projeto e Adm. de Banco de Dados",
-                "visual": "Programação Visual",
-                "intro_info": "Introdução à Informática",
-                "tgs": "Teoria Geral dos Sistemas",
-                "fis": "Fundamentos de Sistemas de Info.",
-                "arch": "Arquitetura de Computadores",
-                "eng1": "Engenharia de Software I",
-                "so": "Sistemas Operacionais",
-                "eng2": "Engenharia de Software II",
-                "networks": "Redes de Computadores",
-                "pm": "Gestão de Projeto de Software",
-                "sad": "Sistemas de Apoio à Decisão",
-                "math_fund": "Fundamentos de Matemática",
-                "logic": "Lógica",
-                "calc": "Cálculo Diferencial e Integral",
-                "algebra": "Álgebra Linear",
-                "prob": "Probabilidade e Estatística",
-                "finance": "Matemática Financeira",
-                "tga": "Teoria Geral da Administração",
-                "sci_method": "Metodologia Científica",
-                "text": "Leitura e Produção de Texto",
-                "osm": "Org., Sistemas e Métodos",
-                "english": "Inglês Técnico",
-                "libras": "Libras",
-                "entrepreneurship": "Empreendedorismo em TI",
-                "accounting": "Contabilidade e Custos",
-                "ethics": "Ética / Direito / Filosofia",
-                "internship": "Estágio & TCC"
+            "certs": {
+                "title": "Certificações",
+                "desc": "Cursos em desenvolvimento web, cibersegurança, liderança e metodologias ágeis."
             }
         },
         "certifications": {
-            "title": "Certificações & Cursos",
             "items": [
                 {
-                    "name": "Potência Tech iFood - Programação do Zero",
-                    "issuer": "DIO / iFood",
-                    "date": "2023",
-                    "file": "/documents/bootcamp tech power ifood.pdf"
-                },
-                {
-                    "name": "Hackers do Bem - Cibersegurança",
-                    "issuer": "RNP",
-                    "date": "2024",
-                    "file": "/documents/Certificate - hackers do bem.pdf"
-                },
-                {
-                    "name": "Coletivo Jovem",
-                    "issuer": "Coca-Cola",
-                    "date": "2023",
-                    "file": "/documents/coca-cola-youth.pdf"
-                },
-                {
-                    "name": "Santander - Cibersegurança 2025",
-                    "issuer": "Santander / DIO",
-                    "date": "2024",
+                    "name": "Bootcamp Santander - Cibersegurança",
+                    "issuer": "DIO + Santander",
                     "file": "/documents/cybersecurity santander.pdf"
                 },
                 {
-                    "name": "Trabalhando em Equipes Ágeis",
-                    "issuer": "DIO",
-                    "date": "2023",
-                    "file": "/documents/equipesageis.pdf"
+                    "name": "Bootcamp Coca-Cola Youth",
+                    "issuer": "DIO + Coca-Cola",
+                    "file": "/documents/coca-cola-youth.pdf"
                 },
                 {
-                    "name": "Excel",
-                    "issuer": "Santander Open Academy",
-                    "date": "2023",
-                    "file": "/documents/excel.pdf"
+                    "name": "Bootcamp Tech Power iFood",
+                    "issuer": "DIO + iFood",
+                    "file": "/documents/bootcamp tech power ifood.pdf"
                 },
                 {
-                    "name": "Liderança",
-                    "issuer": "Santander Open Academy",
-                    "date": "2023",
+                    "name": "Hackers do Bem",
+                    "issuer": "RNP",
+                    "file": "/documents/Certificate - hackers do bem.pdf"
+                },
+                {
+                    "name": "Scrum Fundamentals",
+                    "issuer": "Scrum Study",
+                    "file": "/documents/scrum certification.pdf"
+                },
+                {
+                    "name": "Liderança e Gestão",
+                    "issuer": "Santander",
                     "file": "/documents/leadership.pdf"
                 },
                 {
-                    "name": "Prompt responsável: maximize a IA no seu negócio",
-                    "issuer": "Microsoft / Foundarz",
-                    "date": "2023",
-                    "file": "/documents/prompt responsavel.pdf"
+                    "name": "Equipes Ágeis",
+                    "issuer": "DIO",
+                    "file": "/documents/equipesageis.pdf"
                 },
                 {
-                    "name": "Formação Scrum Master",
-                    "issuer": "DIO",
-                    "date": "2023",
-                    "file": "/documents/scrum certification.pdf"
+                    "name": "Excel Avançado",
+                    "issuer": "Certificação",
+                    "file": "/documents/excel.pdf"
+                },
+                {
+                    "name": "Prompt Responsável",
+                    "issuer": "Microsoft",
+                    "file": "/documents/prompt responsavel.pdf"
                 }
             ]
         },
