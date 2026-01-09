@@ -84,6 +84,7 @@ const Navbar = () => {
           <a href="#about" className="nav-link">{t('nav.about')}</a>
           <a href="#skills" className="nav-link">{t('nav.skills')}</a>
           <a href="#projects" className="nav-link">{t('nav.projects')}</a>
+          <a href="#experience" className="nav-link">{t('nav.experience')}</a>
           <a href="#education" className="nav-link">{t('nav.education')}</a>
           <a href="#contact" className="nav-link">{t('nav.contact')}</a>
 
@@ -139,6 +140,7 @@ const Navbar = () => {
             { href: "#about", label: t('nav.about') },
             { href: "#skills", label: t('nav.skills') },
             { href: "#projects", label: t('nav.projects') },
+            { href: "#experience", label: t('nav.experience') },
             { href: "#education", label: t('nav.education') },
             { href: "#contact", label: t('nav.contact') }
           ].map((item) => (
