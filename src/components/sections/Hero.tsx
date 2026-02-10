@@ -77,7 +77,7 @@ const Hero = () => {
                             href="#contact"
                             className="flex items-center justify-center group w-full sm:w-auto text-center"
                             style={{
-                                backgroundColor: '#FE5C02',
+                                backgroundColor: '#000000',
                                 borderRadius: '1440px',
                                 boxSizing: 'border-box',
                                 color: '#FFFFFF',

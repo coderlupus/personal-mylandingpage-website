@@ -1,6 +1,5 @@
 import React, { useRef } from "react";
 import { ArrowRight } from "lucide-react";
-import { Link } from "react-router-dom";
 import { useTranslation } from 'react-i18next';
 
 interface TestimonialProps {
@@ -104,13 +103,7 @@ const FeaturedProjects = () => {
             </h2>
           </div>
 
-          <Link
-            to="/projects"
-            className="group flex items-center gap-2 text-gray-500 hover:text-gray-900 transition-colors py-2 border-b border-transparent hover:border-gray-900 relative z-20 cursor-pointer"
-          >
-            <span className="font-medium text-sm tracking-wide">{t('projects.view_all')}</span>
-            <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-          </Link>
+
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 relative z-10">
