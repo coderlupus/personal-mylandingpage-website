@@ -17,8 +17,8 @@ const allProjects: Project[] = [
     // Commercial / Real World
     {
         title: "Stay Salmar",
-        category: "Website Comercial",
-        description: "Site institucional desenvolvido para a Stay Salmar, focado em experiência do usuário e conversão.",
+        category: "Website Institucional",
+        description: "Website institucional de alto desempenho, projetado para consolidar a presença digital da marca e impulsionar a conversão de clientes.",
         link: "https://www.staysalmar.com/",
         type: "commercial",
         year: "2025"
@@ -26,15 +26,15 @@ const allProjects: Project[] = [
     {
         title: "Nutri Patrícia Monteiro",
         category: "Website Profissional",
-        description: "Landing page para nutricionista, com design limpo e responsivo.",
+        description: "Plataforma digital completa para saúde, combinando blog educativo e agendamento simplificado para atrair e fidelizar pacientes.",
         link: "https://nutripatriciamonteiro.vercel.app",
         type: "commercial",
         year: "2026"
     },
     {
         title: "Sistema de agendamento - Clínica de Estética",
-        category: "Sistema Fullstack",
-        description: "Sistema de agendamento online para clínica de estética de sobrancelhas. Frontend React e Backend integrados.",
+        category: "Sistema de Gestão",
+        description: "Sistema de gestão inteligente para clínicas de estética, automatizando agendamentos e reduzindo o tempo gasto com tarefas administrativas.",
         link: "https://github.com/fundaoimd/projeto_es_frontend",
         type: "commercial",
         year: "2025"
@@ -42,7 +42,7 @@ const allProjects: Project[] = [
     {
         title: "Krooc Cookies",
         category: "E-commerce Front-end",
-        description: "Interface moderna para uma loja de cookies.",
+        description: "Experiência de e-commerce imersiva e moderna, desenhada para destacar os produtos artesanais e facilitar a jornada de compra.",
         link: "https://github.com/coderlupus/personal-krooc-cookies-website",
         type: "commercial",
         year: "2025"
@@ -50,7 +50,7 @@ const allProjects: Project[] = [
     {
         title: "Ravi Cookies",
         category: "Website Promocional",
-        description: "Landing page para marca de cookies.",
+        description: "Landing page promocional focada em branding, criando uma conexão visual imediata e despertando o desejo de consumo.",
         link: "https://github.com/coderlupus/personal-ravi-cookies-website",
         type: "commercial",
         year: "2025"
@@ -59,24 +59,24 @@ const allProjects: Project[] = [
     // Selected Extension Projects
     {
         title: "Plano de negócios e automação - Estética",
-        category: "Extensão Universitária",
-        description: "Plano de automação para empreendimento de estética.",
+        category: "Consultoria & Automação",
+        description: "Consultoria estratégica e plano de automação operacional para otimizar processos e aumentar a eficiência em clínicas de estética.",
         link: "/documents/certificado-automacao-estetica.png",
         type: "extension",
         year: "2025"
     },
     {
         title: "Plano de Negócio - Automotivo",
-        category: "Extensão Universitária",
-        description: "Elaboração de plano de negócio para o ramo automotivo (TGA 01). 40 horas de atividades.",
+        category: "Consultoria de Negócios",
+        description: "Desenvolvimento de plano de negócios estratégico para o setor automotivo, com análise de viabilidade e expansão de mercado.",
         link: "/documents/certificado-plano-negocio-automotivo.png",
         type: "extension",
         year: "2024"
     },
     {
-        title: "Plataforma Digital - Nordeste",
-        category: "Extensão & Literatura",
-        description: "Participação na escrita de livro e desenvolvimento de plataforma digital para obras relacionadas ao Nordeste e Sertão.",
+        title: "Livro: Cultura Nordestina",
+        category: "Co-autoria Literária",
+        description: "Participação na escrita e publicação de obra literária focada na valorização da cultura do Nordeste e Sertão.",
         link: "/documents/livro-nordeste.pdf",
         type: "extension",
         year: "2025"

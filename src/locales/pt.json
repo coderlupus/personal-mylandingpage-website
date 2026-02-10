@@ -65,24 +65,24 @@
             "view_all": "VER TODOS OS PROJETOS",
             "items": [
                 {
-                    "content": "Sistema de agendamento online para clínica de estética, simplificando a gestão de horários. Frontend React e Backend integrados.",
+                    "content": "Solução completa de agendamento online para clínica de estética, automatizando a gestão de horários e simplificando o fluxo de atendimento.",
                     "author": "Agendamento Estética",
-                    "role": "Sistema Fullstack"
+                    "role": "Sistema de Gestão"
                 },
                 {
-                    "content": "Site institucional profissional desenvolvido com foco em performance e conversão, com design minimalista e responsivo.",
+                    "content": "Presença digital estratégica desenvolvida para fortalecer a marca e converter visitantes em clientes, com foco em performance e experiência do usuário.",
                     "author": "Stay Salmar",
-                    "role": "Website Comercial"
+                    "role": "Website Institucional"
                 },
                 {
-                    "content": "Participação na escrita de livro e desenvolvimento de plataforma digital para obras relacionadas ao Nordeste e Sertão.",
-                    "author": "Plataforma Nordeste",
-                    "role": "Extensão & Cultura"
+                    "content": "Participação em obra literária publicada que documenta e celebra a identidade cultural do Nordeste, demonstrando capacidade de pesquisa e produção de conteúdo.",
+                    "author": "Livro: Cultura Nordestina",
+                    "role": "Co-autoria Literária"
                 },
                 {
-                    "content": "Portfólio interativo para profissional da saúde, integrando blog e sistema de agendamento em uma interface acolhedora.",
+                    "content": "Website profissional integrado para saúde, centralizando informações, blog e agendamento para facilitar a jornada do paciente e fortalecer a autoridade médica.",
                     "author": "Nutri Patrícia Monteiro",
-                    "role": "Landing Page"
+                    "role": "Website Profissional"
                 }
             ]
         },
@@ -123,7 +123,7 @@
                 },
                 {
                     "name": "Scrum Fundamentals",
-                    "issuer": "Scrum Study",
+                    "issuer": "DIO",
                     "file": "/documents/scrum certification.pdf"
                 },
                 {
@@ -138,7 +138,7 @@
                 },
                 {
                     "name": "Excel Avançado",
-                    "issuer": "Certificação",
+                    "issuer": "Santander",
                     "file": "/documents/excel.pdf"
                 },
                 {
